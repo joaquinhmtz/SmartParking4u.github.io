@@ -1,44 +1,41 @@
-TSU Software, Materia: Programación, Clave 50086, Semestre 17-P
-Avance de proyecto final: Presentación y avances.
+theme: jekyll-theme-hacker
+titulo: Bienvenidos a Smart Parking 4u!
+
+TSU Software, Materia: Programacion, Clave 50086, Semestre 17-P
+Avance de proyecto final: Presentacion y avances.
 
 
 Integrantes del equipo:
 
-<<<<<<< HEAD
-· Hernández Martínez Joaquín
-· Nava Rojas Edgardo
-· Mario Morales Sánchez
-=======
-Hernández Martínez Joaquín
+Hernandez Martinez Joaquin
 Nava Rojas Edgardo
 Mario Morales Sánchez
->>>>>>> eba6e242d49c42aee0820bc967a7074876bf3788
 
 
-Motivación del proyecto:
+Motivacion del proyecto:
 
 
-En la ciudad de México los espacios de estacionamiento son cada vez más escasos. Encontramos en los estacionamientos públicos de pequeño y mediano tamaño, ciertos problemas con la administración, los cobros pueden no ser tan exactos si no se tiene un sistema automatizado para llevar el control, a raíz de esto, no se tendrá una cifra real de las ganancias y podría facilitar el hecho de que sufran robos por parte de los mismos empleados.
+En la ciudad de Mexico los espacios de estacionamiento son cada vez más escasos. Encontramos en los estacionamientos publicos de pequeño y mediano tamaño, ciertos problemas con la administracion, los cobros pueden no ser tan exactos si no se tiene un sistema automatizado para llevar el control, a raíz de esto, no se tendrá una cifra real de las ganancias y podría facilitar el hecho de que sufran robos por parte de los mismos empleados.
 
 
-Descripción de su solución de software
+Descripción de su solucion de software
 
 
-Nuestra solución registrará los movimientos de entrada y salida de vehículo. Administrará la actividad de los pensionados. De este modo el administrador tiene la seguridad de que todas las actividades son registradas, eliminando la posibilidad de fraudes. 
-Entre los beneficios están; control exacto del acceso y pago de los vehículos que ingresan al estacionamiento, control de acceso y administración de vehículos pensionados, reducción de las pérdidas por malos manejos en el cobro del servicio.
+Nuestra solucion registrara los movimientos de entrada y salida de vehiculo. Administrara la actividad de los pensionados. De este modo el administrador tiene la seguridad de que todas las actividades son registradas, eliminando la posibilidad de fraudes. 
+Entre los beneficios estan; control exacto del acceso y pago de los vehiculos que ingresan al estacionamiento, control de acceso y administracion de vehiculos pensionados, reduccion de las perdidas por malos manejos en el cobro del servicio.
 
 
-Así mismo la solución podrá indicarle al usuario qué lugar del estacionamiento se
+Asi mismo la solucion podra indicarle al usuario que lugar del estacionamiento se
 encuentra su vehículo, facilitándole su ubicación.
 
 
 Dirección repositorio
 
 
-· Repositorio: .
-o https://github.com/joaquinhmtz/joaquinhmtz.github.io
-· Publicación:
-o https://github.com/joaquinhmtz/joaquinhmtz.github.io/blob/master/ind
+Repositorio: .
+github.com/joaquinhmtz/joaquinhmtz.github.io
+Publicación:
+github.com/joaquinhmtz/joaquinhmtz.github.io/blob/master/ind
 ex.html
 
 
@@ -54,24 +51,24 @@ Descripción módulos:
 
 
 1. Pensionados
-· Registro de vehículos pensionados
-· Fecha de contratación del servicio y término
-· Nombre del propietario
-· Tipo de pensión
-· Cajón designado
-· Captura de placas
+Registro de vehículos pensionados
+Fecha de contratación del servicio y término
+Nombre del propietario
+Tipo de pensión
+Cajón designado
+Captura de placas
 
 
 2. Acceso
-· Check in clientes
-· Captura de placas, hora y folio del ticket, lugar
-· Calcula tiempo y monto exacto del servicio
-· Indica qué lugar está desocupado
+Check in clientes
+Captura de placas, hora y folio del ticket, lugar
+Calcula tiempo y monto exacto del servicio
+Indica qué lugar está desocupado
 
 
 3. Caja
-· Lleva registro de las transacciones
-· Ingresa y retira dinero
-· Cortes al final del día
+Lleva registro de las transacciones
+Ingresa y retira dinero
+Cortes al final del día
 
-theme: jekyll-theme-hacker
+
