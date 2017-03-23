@@ -1,47 +1,29 @@
-import java.io.*;
 
 public class Coche { 
 
-	private String marca;
+	private String tamanio;
 	private String placa;
 
-	private BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
 
-
-	public void setMarca (String pimpLeeStringM()) {
-		this.marca = pimpLeeStringM;
+	public Coche (){
+		this.tamanio = null;
+		this.placa = null;
 	}
 
-	public String getMarca () {
-		return marca;
+
+	public void setTamanio (String tamanio) {
+		this.tamanio = tamanio;
 	}
 
-	public void setPlaca (String pimpLeeStringP()) {
-		this.placa = pimpLeeStringP();
+	public String getTamanio () {
+		return tamanio;
+	}
+
+	public void setPlaca (String placa) {
+		this.placa = placa;
 	}
 
 	public String getPlaca () {
 		return placa;
-	}
-
-	private String leeString() {
-		
-		try{
-
-			dato = entrada.readLine();
-			
-		}catch(IOException e){}
-
-		return dato;
-	}
-
-	private String pimpLeeStringP() {
-		System.out.println("Introduce el numero placa");
-		return leeString();
-	}
-
-	private String pimpLeeStringM() {
-		System.out.println("Introduce la Marca");
-		return leeString();
 	}
 }
