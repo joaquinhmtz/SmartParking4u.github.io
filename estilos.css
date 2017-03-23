@@ -1,0 +1,25 @@
+body {
+	background: url(html/smartlogo.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+
+}
+h1 {
+	font-size: 50px;
+	background: #9ACD32;
+	margin: 45px 70px;
+	border: 8px solid;
+}
+div {
+	background:#87CEEB;
+	width: 100px;
+	height: 35px;
+	border: 3px solid;
+}
+p {
+	font-size: 19px;
+}
+
+b {
+	font-size: 22px;
+}
