@@ -8,7 +8,7 @@ public class Persona {
 	private BufferedReader br = new BufferedReader(isr);
 
 	public String pimpLeeNombre() {
-		System.out.print("Nombre del propietario ls: ");
+		System.out.print("Nombre del propietario: ");
 		return leeNombre();
 	}
 	private String leeNombre() {
