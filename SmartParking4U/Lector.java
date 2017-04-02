@@ -11,7 +11,7 @@ public class Lector {
     private int anio;
 
 
-    private int leeInt() {
+    public int leeInt() {
 
         int numInt=0;
         
@@ -25,7 +25,7 @@ public class Lector {
         return numInt;
     }
 
-    private float leeFloat() {
+    public float leeFloat() {
 
         float numFloat=0;
         
@@ -39,7 +39,7 @@ public class Lector {
         return numFloat;
     }
 
-    private String leeString() {
+    public String leeString() {
         
         try {
             sDato = br.readLine();
@@ -50,29 +50,29 @@ public class Lector {
     public int leeOption() {
         int opt = 0;
         try{
-            dato = br.readLine();
-            opt = Integer.parseInt(dato);
+            sDato = br.readLine();
+            opt = Integer.parseInt(sDato);
         }catch(IOException e) {}
         return opt;
     }
     public int leeDia() {
         try{
-            dato = br.readLine();
-            dia = Integer.parseInt(dato);
+            sDato = br.readLine();
+            dia = Integer.parseInt(sDato);
         }catch(IOException e) {}
         return dia;
     }
     public int leeMes() {
         try{
-            dato = br.readLine();
-            mes = Integer.parseInt(dato);
+            sDato = br.readLine();
+            mes = Integer.parseInt(sDato);
         }catch(IOException e) {}
         return mes;
     }
     public int leeAnio() {
         try{
-            dato = br.readLine();
-            anio = Integer.parseInt(dato);
+            sDato = br.readLine();
+            anio = Integer.parseInt(sDato);
         }catch(IOException e) {}
         return anio;
     }
