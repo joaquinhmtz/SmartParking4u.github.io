@@ -6,10 +6,8 @@ public class Lector {
     private InputStreamReader isr = new InputStreamReader(System.in);
     private BufferedReader br = new BufferedReader(isr);
     private String sDato = "";
-    private int dia;
-    private int mes;
-    private int anio;
-
+    private int [] numero = new int[20];
+    Cajon lugar = new Cajon();
 
     public int leeInt() {
 
@@ -40,7 +38,7 @@ public class Lector {
     }
 
     public String leeString() {
-        
+
         try {
             sDato = br.readLine();
         } catch (IOException e) {}
@@ -55,26 +53,14 @@ public class Lector {
         }catch(IOException e) {}
         return opt;
     }
-    public int leeDia() {
+
+    public void leeIntArreglo() {
+        int i = 0;
         try{
             sDato = br.readLine();
-            dia = Integer.parseInt(sDato);
+            numero[i] = Integer.parseInt(sDato);
         }catch(IOException e) {}
-        return dia;
-    }
-    public int leeMes() {
-        try{
-            sDato = br.readLine();
-            mes = Integer.parseInt(sDato);
-        }catch(IOException e) {}
-        return mes;
-    }
-    public int leeAnio() {
-        try{
-            sDato = br.readLine();
-            anio = Integer.parseInt(sDato);
-        }catch(IOException e) {}
-        return anio;
+        //return numero[i];
     }
 
 }

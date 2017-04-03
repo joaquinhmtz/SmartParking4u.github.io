@@ -3,10 +3,13 @@ import java.io.*;
 public class Menu {
     private int opc = 0;
 
-    Lector reader = new Lector();
-    Persona persona1 = new Persona();
-    FechaServicio fecha = new FechaServicio();
-    Contrato servicio = new Contrato();
+    private Lector reader = new Lector();
+    private Persona persona1 = new Persona();
+    private FechaServicio fecha = new FechaServicio();
+    private Contrato servicio = new Contrato();
+    private Cajon lugar = new Cajon();
+    private Estacionamiento lugares = new Estacionamiento();
+    //private int [] cajon = new int[20];
 
     BufferedReader entrada = new BufferedReader (new InputStreamReader (System.in));
 
@@ -33,8 +36,8 @@ public class Menu {
 
             case 1:
             System.out.println ("Escogiste Estacionamiento");
-            System.out.println ("Ingresa el numero de cajon");
-
+            System.out.println ("Escoge el lugar dónde desee aparcar su automóvil: ");
+            reader.leeIntArreglo();
 
 
             
@@ -45,6 +48,12 @@ public class Menu {
             System.out.print("Nombre del conductor: ");
             persona1.setNombre(reader.leeString());
             servicio.Menu(0);
+            System.out.print("¿De qué tamaño requiere el cajón? ");
+            lugar.setTamanio(reader.leeString());
+            System.out.print("¿Necesita lugar para discapacitado? ");
+            lugar.setTipo(reader.leeString());
+            System.out.print("Escoge el lugar dónde desee aparcar su automóvil: ");
+            reader.leeIntArreglo();
             System.out.print("Fecha de contratación del servicio: ");
             fecha.setFechaContra(reader.leeString());
             System.out.print("Fecha de vencimiento del servicio: ");
@@ -66,6 +75,12 @@ public class Menu {
         }
 
     }
+
+
+
+
+
+
 
 
 

@@ -4,7 +4,7 @@ public class Cajon {
 
 	private String tamanio;
 	private String tipo;
-	private int [] numero = new int[20];
+	private int [] lugar = new int[20];
 
 	public void setTamanio(String tamanio_p) {
 		this.tamanio  = tamanio_p;
@@ -22,14 +22,15 @@ public class Cajon {
 		return this.tipo;
 	}
 
-	public void setNumero(int numero_p[]) {
-		this.numero  = numero_p;
-	}
 
-	public int getNumero(int i) {
-		return this.numero[i];
-	}
+    public void setLugar(int lugar_p[]) {
+    	int i = 0;
+        this.lugar[i]  = lugar_p[i];
+    }
 
-	
+    public int getLugar() {
+    	int i = 0;
+        return this.lugar[i];
+    }
 	
 }
