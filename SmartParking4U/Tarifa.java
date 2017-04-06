@@ -6,6 +6,14 @@ public class Tarifa {
         float tarifaHora;
         float tarifaQuinceMin;
 
+    public Tarifa () {
+        this.tarifaPensionadoMes=850.00;
+        this.tarifaPensionadoDia=150.00;
+        this.tarifaPensionadoSemana=350.00;
+        this.tarifaHora=22.00;
+        this.tarifaQuinceMin=15.00;
+    }
+
     public float getTarifaPensionadoMes() {
         return tarifaPensionadoMes;
     }

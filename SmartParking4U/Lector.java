@@ -5,9 +5,9 @@ public class Lector {
 
     private InputStreamReader isr = new InputStreamReader(System.in);
     private BufferedReader br = new BufferedReader(isr);
-    private String sDato = "";
-    private int [] numero = new int[20];
-    Cajon lugar = new Cajon();
+    private String sDato;
+    //private int [] numero = new int[20];
+    
 
     public int leeInt() {
 
@@ -37,7 +37,7 @@ public class Lector {
         return numFloat;
     }
 
-    public String leeString() {
+    public String leeCadena() {
 
         try {
             sDato = br.readLine();
@@ -45,22 +45,22 @@ public class Lector {
         return sDato;
     }
 
-    public int leeOption() {
-        int opt = 0;
-        try{
-            sDato = br.readLine();
-            opt = Integer.parseInt(sDato);
-        }catch(IOException e) {}
-        return opt;
-    }
+//    public int leeOption() {
+//        int opt = 0;
+//        try{
+//            sDato = br.readLine();
+//            opt = Integer.parseInt(sDato);
+//        }catch(IOException e) {}
+//        return opt;
+//    }
 
-    public void leeIntArreglo() {
-        int i = 0;
-        try{
-            sDato = br.readLine();
-            numero[i] = Integer.parseInt(sDato);
-        }catch(IOException e) {}
+//    public void leeIntArreglo() {
+//        int i = 0;
+//        try{
+//            sDato = br.readLine();
+//            numero[i] = Integer.parseInt(sDato);
+//        }catch(IOException e) {}
         //return numero[i];
-    }
+//    }
 
 }

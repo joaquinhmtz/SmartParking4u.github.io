@@ -8,17 +8,17 @@ public class Tiempo {
 	private int seg;
 
 
-	public void setTiempo() {
+	public Tiempo () {
 		Calendar tiempo = new GregorianCalendar();
 		this.hora = tiempo.get(Calendar.HOUR_OF_DAY);
 		this.min = tiempo.get(Calendar.MINUTE);
 		this.seg = tiempo.get(Calendar.SECOND);
 	}
 
-	public void setTiempo(int hora_param, int min_param, int seg_param) {
+	public Tiempo(int hora_param, int min_param) {
 		this.hora = hora_param;
 		this.min = min_param;
-		this.seg = seg_param;
+		this.seg = tiempo.get(Calendar.SECOND);
 	}
 
 	public void getTiempo(int[] retorno_tiempo) {
@@ -26,10 +26,6 @@ public class Tiempo {
 		retorno_tiempo[1] = min;
 		retorno_tiempo[2] = seg;
 
-	}
-
-	public static void printTiempo(int[] tiempo) {
-		System.out.println(tiempo[0]+"/"+tiempo[1]+"/"+tiempo[2]);
 	}
 	
 
