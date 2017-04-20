@@ -4,7 +4,6 @@ public class Coche {
 	private String tamanio;
 	private String placa;
 
-
 	public Coche (){
 		this.tamanio = null;
 		this.placa = null;
@@ -26,4 +25,6 @@ public class Coche {
 	public String getPlaca () {
 		return placa;
 	}
+
+	
 }

@@ -28,14 +28,12 @@ public class Menu {
 
 			case 1:
 			System.out.println ("Escogiste Estacionamiento");
-			System.out.println ("Ingresa el numero de cajon");
 
 
 			
 			break;
 			case 2:
-			System.out.println ("Escogiste Estacionamiento");
-			System.out.println ("Ingresa el numero de cajon");
+			System.out.println ("Escogiste Pension");
 
 			break;
 			case 3:
