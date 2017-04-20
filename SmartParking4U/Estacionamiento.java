@@ -1,21 +1,21 @@
-import java.io.*;
-
 public class Estacionamiento {
 
-	private int estacionamiento [] = new int [20];
-	private String tamanio;
+	private String nombreEstacionamiento;
+	private int noDeLugares;
 
-	private InputStreamReader isr = new InputStreamReader(System.in);
-	private BufferedReader br = new BufferedReader(isr);
-
-	public String pimpLeeCajontam() {
-		System.out.print("Tamaño del cajón que requiere: ");
-		return leecajonTam();
+	public void setNombreEstacionamiento(String nombreEstacionamiento_param){
+		this.nombreEstacionamiento=nombreEstacionamiento_param;
 	}
-	private String leecajonTam() {
-		try{
-			tamanio = br.readLine();
-		}catch(IOException e) {}
-		return tamanio;
+	
+	public String getNombreEstacionamiento(){
+		return this.nombreEstacionamiento;
+	}
+
+	public void setNoLugares(int noDeLugares_param){
+		this.noDeLugares=noDeLugares_param;
+	}
+	
+	public int getNoDeLugares(){
+		return this.noDeLugares;
 	}
 }
