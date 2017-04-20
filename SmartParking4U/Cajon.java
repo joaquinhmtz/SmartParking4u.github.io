@@ -4,53 +4,33 @@ public class Cajon {
 
 	private String tamanio;
 	private String tipo;
-	private int numero;
-	private String dato;
+	private int [] lugar = new int[20];
 
-	private InputStreamReader isr = new InputStreamReader(System.in);
-	private BufferedReader br = new BufferedReader(isr);
+	public void setTamanio(String tamanio_p) {
+		this.tamanio  = tamanio_p;
+	}
 
-	public String pimpLeetamanio() {
-		System.out.print("Tamaño del automóvil: ");
-		return leeTamanio();
+	public String getTamanio() {
+		return this.tamanio;
 	}
-	private String leeTamanio() {
-		try{
-			tamanio = br.readLine();
-		}catch(IOException e) {}
-		return tamanio;
-	}
-	public String pimpLeeTipo() {
-		System.out.print("Discapacitado/NO Discapacitado: ");
-		return leetipo();
-	}
-	private String leetipo() {
-		try{
-			tipo = br.readLine();
-		}catch(IOException e) {}
-		return tipo;
-	}
-	public void pimpLeeNumero() {
-		System.out.print("Número de cajón asignado: ");
-		 this.Condition();
 
+	public void setTipo(String tipo_p) {
+		this.tipo  = tipo_p;
 	}
-	private int leenumero() {
-		try{
-			dato = br.readLine();
-			numero = Integer.parseInt(dato);
-		}catch(IOException e) {}
-		return numero;
-	}
-	private void Condition() {
-		this.leenumero();		
-		int num_param = 0;
-		num_param = numero;
-		if(num_param == numero) {
-			System.out.println("El cajón designado, ya está ocupado");
-		} else
-			System.out.println("El cajón designado, está libre");
 
+	public String getTipo() {
+		return this.tipo;
 	}
+
+
+    public void setLugar(int lugar_p[]) {
+    	int i = 0;
+        this.lugar[i]  = lugar_p[i];
+    }
+
+    public int getLugar() {
+    	int i = 0;
+        return this.lugar[i];
+    }
 	
 }
