@@ -17,7 +17,29 @@ public class Tiempo {
 		this.hora = tiempo.get(Calendar.HOUR_OF_DAY);
 		this.min = tiempo.get(Calendar.MINUTE);
 		this.seg = tiempo.get(Calendar.SECOND);
+<<<<<<< HEAD
 
+=======
+
+	}
+
+	public void setTiempoDefault(Tiempo time) {
+		int[] ret_horaEntrada = new int[3];
+		time.getTiempo(ret_horaEntrada);
+		this.hora = ret_horaEntrada[0] + 1;
+		this.min = ret_horaEntrada[1];
+		this.seg = ret_horaEntrada[2];
+
+	}
+
+	public void setTiempoHoras(Tiempo time , int horas_param) {
+		int[] ret_horaEntrada = new int[3];
+		time.getTiempo(ret_horaEntrada);
+		this.hora = ret_horaEntrada[0] + horas_param;
+		this.min = ret_horaEntrada[1];
+		this.seg = ret_horaEntrada[2];
+
+>>>>>>> 628bad49222e68b8f02ad72c850ea05ac3ef1649
 	}
 
 	public void getTiempo(int[] retorno_tiempo) {

@@ -33,7 +33,7 @@ public class Menus {
 
 	}
 
-	public void menuOperador1 () {
+	public void menuOperadorEntrada () {
 
 		System.out.println ("___________________________");
 		System.out.println ("|    Smart Parking 4U     |");
@@ -44,7 +44,7 @@ public class Menus {
 
 	}
 
-	public void menuOperador2 () {
+	public void menuOperadorSalida () {
 
 		System.out.println ("___________________________");
 		System.out.println ("|    Smart Parking 4U     |");
@@ -53,4 +53,14 @@ public class Menus {
 		System.out.println ("|_________________________|");
 
 	}	
+
+	public void menuOperadorAltaPension () {
+
+		System.out.println ("___________________________");
+		System.out.println ("|    Smart Parking 4U     |");
+		System.out.println ("| 	    Alta Pensión       |");
+		System.out.println ("|_________________________|");
+
+
+	}
 }
