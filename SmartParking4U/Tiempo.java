@@ -9,16 +9,15 @@ public class Tiempo {
 
 
 	public Tiempo () {
+		setTiempo();
+	}
+
+	public void setTiempo() {
 		Calendar tiempo = new GregorianCalendar();
 		this.hora = tiempo.get(Calendar.HOUR_OF_DAY);
 		this.min = tiempo.get(Calendar.MINUTE);
 		this.seg = tiempo.get(Calendar.SECOND);
-	}
 
-	public Tiempo(int hora_param, int min_param) {
-		this.hora = hora_param;
-		this.min = min_param;
-		this.seg = tiempo.get(Calendar.SECOND);
 	}
 
 	public void getTiempo(int[] retorno_tiempo) {
@@ -26,6 +25,10 @@ public class Tiempo {
 		retorno_tiempo[1] = min;
 		retorno_tiempo[2] = seg;
 
+	}
+
+	public static void imprimeHora (int [] retorno_tiempo) {
+		System.out.println (retorno_tiempo[0]+":"+retorno_tiempo[1]+":"+retorno_tiempo[2]);
 	}
 	
 

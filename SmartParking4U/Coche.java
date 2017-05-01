@@ -1,21 +1,13 @@
 
 public class Coche { 
 
-	private String tamanio;
+	
 	private String placa;
+	private String marca;
 
 	public Coche (){
-		this.tamanio = null;
-		this.placa = null;
-	}
-
-
-	public void setTamanio (String tamanio) {
-		this.tamanio = tamanio;
-	}
-
-	public String getTamanio () {
-		return tamanio;
+		this.placa = "unknown";
+		this.marca = "unknown";
 	}
 
 	public void setPlaca (String placa) {
@@ -26,5 +18,12 @@ public class Coche {
 		return placa;
 	}
 
+	public void setMarca (String marca) {
+		this.marca = marca;
+	}
+
+	public String getMarca () {
+		return marca;
+	}
 	
 }
