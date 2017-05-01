@@ -1,12 +1,9 @@
 public class DirectorioUsuarios {
 
-	private Usuario operador=new Usuario("Operador1", "1234");
+	private Usuario operador=new Usuario("operador1", "1234");
 	private Usuario gerente=new Usuario( "administrador", "presto");
 	private Lector tomaDato=new Lector();
 
-	public DirectorioUsuarios () {
-
-	}
 
 	public int iniciarSesion () {
 
