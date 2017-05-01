@@ -3,6 +3,12 @@ public class Estacionamiento {
 	private String nombreEstacionamiento;
 	private int noDeLugares;
 
+	public Estacionamiento (){
+
+		this.nombreEstacionamiento="El parquimetro S.A.";
+		this.noDeLugares=50;
+	}
+
 	public void setNombreEstacionamiento(String nombreEstacionamiento_param){
 		this.nombreEstacionamiento=nombreEstacionamiento_param;
 	}
