@@ -20,6 +20,24 @@ public class Tiempo {
 
 	}
 
+	public void setTiempoDefault(Tiempo time) {
+		int[] ret_horaEntrada = new int[3];
+		time.getTiempo(ret_horaEntrada);
+		this.hora = ret_horaEntrada[0] + 1;
+		this.min = ret_horaEntrada[1];
+		this.seg = ret_horaEntrada[2];
+
+	}
+
+	public void setTiempoHoras(Tiempo time , int horas_param) {
+		int[] ret_horaEntrada = new int[3];
+		time.getTiempo(ret_horaEntrada);
+		this.hora = ret_horaEntrada[0] + horas_param;
+		this.min = ret_horaEntrada[1];
+		this.seg = ret_horaEntrada[2];
+
+	}
+
 	public void getTiempo(int[] retorno_tiempo) {
 		retorno_tiempo[0] = hora;
 		retorno_tiempo[1] = min;
