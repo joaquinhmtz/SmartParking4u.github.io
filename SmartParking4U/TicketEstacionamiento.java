@@ -38,17 +38,21 @@ public class TicketEstacionamiento extends Ticket {
 		hora_salida.getTiempo(ret_horaSalida);
 		hora=ret_horaSalida[0]-ret_horaEntrada[0];
 		minutos=ret_horaSalida[1]-ret_horaEntrada[1];
-		
 		if (minutos>0) 
 			minutos=1;
 		else
 			minutos=0;
-
 		if (hora==0) hora=1;
-
 		resultado=hora+minutos;
-
 		return resultado;
+	}
+
+	public float calculaTarifa(){
+		
+		Tarifa tarifa= new Tarifa();
+		float calculo=0;
+		calculo=getHoraCalculo()*tarifa.getTarifaHora();
+		return calculo;
 	}
 
 	public void imprimeHoraEntrada() {
@@ -65,7 +69,6 @@ public class TicketEstacionamiento extends Ticket {
 		imprimeTicket();
 		imprimeHoraEntrada();
 		imprimeHoraSalida();
-
 	}
 
 	public String devHorEntr(){ 
