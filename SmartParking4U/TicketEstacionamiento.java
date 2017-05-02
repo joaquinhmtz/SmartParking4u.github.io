@@ -34,18 +34,26 @@ public class TicketEstacionamiento extends Ticket {
 		int minutos=0;
 		int resultado=0;
 
+<<<<<<< HEAD
 		hora_entrada.getTiempo (ret_horaEntrada);
 		hora_salida.getTiempo(ret_horaSalida);
 		hora=ret_horaSalida[0]-ret_horaEntrada[0];
 		minutos=ret_horaSalida[1]-ret_horaEntrada[1];
 		
+=======
+		hora=ret_horaSalida[0]-ret_horaEntrada[0];
+		minutos=ret_horaSalida[1]-ret_horaEntrada[1];
+>>>>>>> 20ffdef0d63178ea660b5a18e65c2e09d66656f6
 		if (minutos>0) 
 			minutos=1;
 		else
 			minutos=0;
+<<<<<<< HEAD
 
 		if (hora==0) hora=1;
 
+=======
+>>>>>>> 20ffdef0d63178ea660b5a18e65c2e09d66656f6
 		resultado=hora+minutos;
 
 		return resultado;
