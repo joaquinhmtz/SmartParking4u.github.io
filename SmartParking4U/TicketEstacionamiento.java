@@ -34,12 +34,18 @@ public class TicketEstacionamiento extends Ticket {
 		int minutos=0;
 		int resultado=0;
 
+		hora_entrada.getTiempo (ret_horaEntrada);
+		hora_salida.getTiempo(ret_horaSalida);
 		hora=ret_horaSalida[0]-ret_horaEntrada[0];
 		minutos=ret_horaSalida[1]-ret_horaEntrada[1];
+		
 		if (minutos>0) 
 			minutos=1;
 		else
 			minutos=0;
+
+		if (hora==0) hora=1;
+
 		resultado=hora+minutos;
 
 		return resultado;
@@ -47,12 +53,12 @@ public class TicketEstacionamiento extends Ticket {
 
 	public void imprimeHoraEntrada() {
 		hora_entrada.getTiempo(ret_horaEntrada);
-		hora_entrada.imprimeHora (ret_horaEntrada);
+		System.out.println(hora_entrada.devuelveHora(ret_horaEntrada));
 	}
 
 	public void imprimeHoraSalida() {
 		hora_salida.getTiempo(ret_horaSalida);
-		hora_salida.imprimeHora(ret_horaSalida);
+		System.out.println(hora_salida.devuelveHora(ret_horaSalida));
 	}
 
 	public void imprimeTicketHoras() {
@@ -60,6 +66,16 @@ public class TicketEstacionamiento extends Ticket {
 		imprimeHoraEntrada();
 		imprimeHoraSalida();
 
+	}
+
+	public String devHorEntr(){ 
+		hora_entrada.getTiempo(ret_horaEntrada);
+		return hora_entrada.devuelveHora(ret_horaEntrada);
+	}
+
+	public String devHorSal(){ 
+		hora_salida.getTiempo(ret_horaSalida);
+		return hora_salida.devuelveHora(ret_horaSalida);
 	}
 
 }

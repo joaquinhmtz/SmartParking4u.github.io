@@ -2,11 +2,11 @@ public class Ticket {
 
 	private Fecha fecha_entrada;
 	private Estacionamiento nomEstac;
-	protected int folio;
+	private int folio;
 	private int[] ret_fechaEntrada = new int[3];
 
 	public Ticket () {
-		this.folio = 0;
+		this.folio=0;
 		fecha_entrada = new Fecha ();
 		nomEstac=new Estacionamiento();
 	}
