@@ -38,7 +38,6 @@ public class Ticket {
 	
 	public void imprimeTicket () {
 		System.out.println(nomEstac.getNombreEstacionamiento());
-		System.out.println ("Folio: " + getFolio());
-		imprimeFechaEntrada();
+		System.out.println(nomEstac.getDireccionEstacionamiento());
 	}
 }

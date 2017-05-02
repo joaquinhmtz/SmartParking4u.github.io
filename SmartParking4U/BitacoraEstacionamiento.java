@@ -10,37 +10,45 @@ public class BitacoraEstacionamiento {
 	ArrayList <String > hEntrada= new  ArrayList <String>();
 	ArrayList <String> hSalida= new  ArrayList <String>();
 	ArrayList <Float> montoCobro= new  ArrayList <Float>();
-
 	
 	public BitacoraEstacionamiento(){
-
 		eTicket=new TicketEstacionamiento();
 		autos=new Coche();	
 	}
 
-	public void setEntradaAutos(){
-
-		eTicket.setFolio(eTicket.getFolio());
-		eTicket.sumaFolio();
-		System.out.println("Dame las placas del auto: ");
-		autos.setPlaca(leeDatos.leeCadena());
-		placas.add(autos.getPlaca());
-		hEntrada.add(eTicket.devHorEntr());
-		consecutivo.add(eTicket.getFolio());
-		hSalida.add(" ");
-		montoCobro.add(0f);
+	public boolean getRevisaPlacas(ArrayList placas_establec, ArrayList placas_pension){
+		String temp1=" ";
+		System.out.print("Para iniciar el proceso de salida teclea las placas del auto: ");
+		temp1=leeDatos.leeCadena();
+		return true;
 	}
 
-	public void setSalidaAutos () {
-		String temp1=" ";
+	public void setEntradaAutos(String placas_param){
+		eTicket.setHoraEntrada();
+		hEntrada.add(eTicket.getHoraEntrada());
 
-		System.out.print("Dame las placas del carro: ");
-		temp1=leeDatos.leeCadena();
+		eTicket.sumaFolio();
+		consecutivo.add(eTicket.getFolio());
 
+		autos.setPlaca(placas_param);
+		placas.add(autos.getPlaca());
+				
+		hSalida.add(" ");
+		montoCobro.add(0f);	
+		eTicket.imprimeTicketEntrada(eTicket.getFolio(), eTicket.getHoraEntrada(), autos.getPlaca());	
+	
+	}
+
+	public void setSalidaAutos (String placas_param) {
+		String temp1=placas_param;
+		int i=0;	
 		for(String temp2:placas){
 			if (temp2.compareTo(temp1)==0) {
-				montoCobro.add(placas.indexOf(temp1),eTicket.calculaTarifa());		
-				hSalida.add(placas.indexOf(temp1), eTicket.devHorSal());			
+				i=placas.indexOf(temp1);
+				montoCobro.add(i,eTicket.calculaTarifa());
+				eTicket.setHoraSalida();		
+				hSalida.add(i,eTicket.getHoraSalida());
+				eTicket.imprimeTicketSalida(consecutivo.get(i), hEntrada.get(i), hSalida.get(i), placas.get(i), montoCobro.get(i));		
 				break;
 			}
 		}		
@@ -66,7 +74,4 @@ public class BitacoraEstacionamiento {
 		return hSalida;
 	}	
 
-	public String toString(){
-		return eTicket.getFolio()+ "   "+ eTicket.devHorEntr()+"   "+ eTicket.devHorSal()+"   "+autos.getPlaca()+"   "+eTicket.calculaTarifa();
-	}
 }

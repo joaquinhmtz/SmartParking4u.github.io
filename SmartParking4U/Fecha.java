@@ -39,6 +39,10 @@ public class Fecha {
 		retorno_fecha[2] = anio;
 	}
 
+	public String devFecha(){
+		return this.dia+" / "+this.mes+" / "+this.anio;
+	}
+
 	public static void imprimeFecha (int [] retorno_fecha) {
 		System.out.println (retorno_fecha[0]+"/"+retorno_fecha[1]+"/"+retorno_fecha[2]);
 	}

@@ -42,8 +42,15 @@ public class Tiempo {
 		retorno_tiempo[2] = seg;
 	}
 
-	public String devuelveHora (int [] retorno_tiempo) {
-		return retorno_tiempo[0]+":"+retorno_tiempo[1]+":"+retorno_tiempo[2];
+	public int getHora(){
+		return this.hora; 
 	}
 
+	public int getMin(){
+		return this.min; 
+	}
+
+	public static void imprimeHora (int [] retorno_tiempo) {
+		System.out.println (retorno_tiempo[0]+":"+retorno_tiempo[1]+":"+retorno_tiempo[2]);
+	}
 }
