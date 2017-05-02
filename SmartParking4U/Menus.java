@@ -24,6 +24,60 @@ public class Menus {
 
 	}
 
+	public void gerenteTarifa () {
+
+		System.out.println ("______ ____________________");
+		System.out.println ("|       Smart Parking     |");
+		System.out.println ("|       Cambiar Tarifa    |");
+		System.out.println ("|1.-        Hora          |");
+		System.out.println ("|2.-     Pension Mes      |");
+		System.out.println ("|3.-     Pension Hora     |");
+		System.out.println ("|4.-      Usuarios        |");		
+		System.out.println ("|5.-       Salir          |");		
+		System.out.println ("|_________________________|");
+
+	}
+
+	public void gerenteCaja () {
+
+		System.out.println ("___________________________");
+		System.out.println ("|    Smart Parking 4U     |");
+		System.out.println ("| Escoge tipo de servicio |");
+		System.out.println ("|1.-       Tarifa         |");
+		System.out.println ("|2.-        Caja          |");
+		System.out.println ("|3.-       Ventas         |");
+		System.out.println ("|4.-      Usuarios        |");		
+		System.out.println ("|5.-       Salir          |");		
+		System.out.println ("|_________________________|");
+
+	}
+
+	public void gerenteVentas () {
+
+		System.out.println ("___________________________");
+		System.out.println ("|    Smart Parking 4U     |");
+		System.out.println ("|    Escoge una opción    |");
+		System.out.println ("|1.-  Configura Remesa    |");
+		System.out.println ("|2.-    Dinero en Caja    |");
+		System.out.println ("|3.-       Salir          |");		
+		System.out.println ("|_________________________|");
+
+	}
+
+	public void gerenteUsuarios () {
+
+		System.out.println ("___________________________");
+		System.out.println ("|    Smart Parking 4U     |");
+		System.out.println ("| Escoge tipo de servicio |");
+		System.out.println ("|1.-       Tarifa         |");
+		System.out.println ("|2.-        Caja          |");
+		System.out.println ("|3.-       Ventas         |");
+		System.out.println ("|4.-      Usuarios        |");		
+		System.out.println ("|5.-       Salir          |");		
+		System.out.println ("|_________________________|");
+
+	}
+
 
 	public void operador () {
 

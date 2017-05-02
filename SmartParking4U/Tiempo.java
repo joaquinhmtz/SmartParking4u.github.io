@@ -17,9 +17,7 @@ public class Tiempo {
 		this.hora = tiempo.get(Calendar.HOUR_OF_DAY);
 		this.min = tiempo.get(Calendar.MINUTE);
 		this.seg = tiempo.get(Calendar.SECOND);
-<<<<<<< HEAD
 
-=======
 
 	}
 
@@ -39,7 +37,6 @@ public class Tiempo {
 		this.min = ret_horaEntrada[1];
 		this.seg = ret_horaEntrada[2];
 
->>>>>>> 628bad49222e68b8f02ad72c850ea05ac3ef1649
 	}
 
 	public void getTiempo(int[] retorno_tiempo) {
