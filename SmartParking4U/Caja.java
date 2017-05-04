@@ -19,13 +19,21 @@ public class Caja {
 
 	public void setIngresos(float montoACobrar){
 		float cambio=0;
+		
 		System.out.print("Con cuanto paga el cliente:");
-		cambio=lecturaDatos.leeFloat()-montoACobrar;
-		System.out.println("Su cambio es: " + cambio);
+		cambio=lecturaDatos.leeFloat();
+		if (cambio>=montoACobrar){
+			cambio=cambio-montoACobrar;
+			System.out.println("Su cambio es: " + cambio);
+			System.out.println("No se te olvide decirle al cliente Buen viaje!");
+		} else {
+			cambio=0;
+			System.out.println("Vuelva a ingresar el folio.");
+		}		
 		this.dineroEnCaja=this.dineroEnCaja+montoACobrar;
 	}
 
-	public double getdineroEnCaja(){
+	public double getDineroEnCaja(){
 		return this.dineroEnCaja;
 	}
 

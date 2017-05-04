@@ -2,17 +2,12 @@ public class TicketEstacionamiento extends Ticket {
 
 	private Tiempo hora_entrada;
 	private Tiempo hora_salida;
-	private Fecha fecha_deHoy=new Fecha ();
 	private Tarifa tarifa= new Tarifa();
-	private int[] ret_horaEntrada = new int[3];
-	private int[] ret_horaSalida = new int[3];
-
 	
 	public TicketEstacionamiento() {
 		super();
 		hora_entrada = new Tiempo ();
 		hora_salida = new Tiempo ();
-		//hora_salida.setTiempoDefault(hora_entrada);
 	}
 
 	public void setHoraEntrada () {
@@ -31,27 +26,21 @@ public class TicketEstacionamiento extends Ticket {
 		return hora_salida.getHora()+ ":" + hora_salida.getMin();
 	}
 
-	public int getHoraCalculo (){
+	public float montoACobrar (){
 		int aux=0;
 		int aux1=0;
 		int horaCalculo=0;
+		float calculo=0;
 
 		aux=hora_salida.getHora()-hora_entrada.getHora();
 		aux1=hora_salida.getMin()-hora_entrada.getMin();
-		
 		if (aux==0)
 			horaCalculo=1;
 		else if (aux1<=0)
 			horaCalculo=aux;
 		else if(aux1>0)
 			horaCalculo=aux+1;
-		return horaCalculo;
-	}
-
-	public float calculaTarifa(){		
-		float calculo=0;
-
-		calculo=getHoraCalculo()*tarifa.getTarifaHora();
+		calculo=horaCalculo*tarifa.getTarifaHora();
 		return calculo;
 	}
 
@@ -60,7 +49,7 @@ public class TicketEstacionamiento extends Ticket {
 		System.out.println(" ");
 		imprimeTicket();
 		System.out.println(" ");
-		System.out.println("FECHA: "+fecha_deHoy.devFecha());
+		System.out.println("FECHA: "+getFechaDeHoy());
 		System.out.println(" ");
 		System.out.println("FOLIO: "+folio);
 		System.out.println(" ");
@@ -71,7 +60,7 @@ public class TicketEstacionamiento extends Ticket {
 		System.out.print("Tarifa por hora o fraccion: $ "+ tarifa.getTarifaHora());
 		System.out.println(" ");
 		System.out.println(" ");
-		System.out.println("La empresa no se hace responsable por dannos parciales o totales de su vehiculo.");
+		System.out.println("La empresa no se hace responsable por danos parciales o totales de su vehiculo.");
 		System.out.println(" ");
 		System.out.println("Usted deja su vehiculo bajo su propia responsabilidad.");
 		System.out.println(" ");
@@ -86,7 +75,7 @@ public class TicketEstacionamiento extends Ticket {
 		System.out.println(" ");
 		imprimeTicket();
 		System.out.println(" ");
-		System.out.println("FECHA: "+fecha_deHoy.devFecha());
+		System.out.println("FECHA: "+getFechaDeHoy());
 		System.out.println(" ");
 		System.out.println("FOLIO: "+folio);
 		System.out.println(" ");

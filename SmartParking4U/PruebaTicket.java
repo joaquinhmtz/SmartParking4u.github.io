@@ -5,13 +5,20 @@ public class PruebaTicket {
 	public static void main(String[] args) {
 		
 	BitacoraEstacionamiento prueba = new BitacoraEstacionamiento();
+	TicketPension prueba2=new TicketPension();
 	
-	prueba.setEntradaAutos("123QWE");
-	prueba.setEntradaAutos("345RET");
-	prueba.setEntradaAutos("567TA");
-	prueba.setSalidaAutos("123QWE");
+	//prueba.setEntradaAutos();
+	//prueba.setEntradaAutos();
+	prueba.setEntradaAutos();
+	prueba.setSalidaAutos();
 
+	//System.out.println(prueba2.getFechaDeHoy());
+	//System.out.println(prueba2.getFechaSalidaMes());
+	//System.out.println(prueba2.getFechaSalidaSemana());
 
+	
+
+	
 	}
 
 }

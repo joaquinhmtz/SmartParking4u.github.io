@@ -14,7 +14,7 @@ public class Lector {
             sDato = br.readLine();
             numInt = Integer.parseInt(sDato);
         } catch(NumberFormatException e){
-            System.out.println("El monto ingresado no es correcto");
+            System.out.println("El numero ingresado no es correcto");
             return -1;
         }catch (IOException e) {}
         
@@ -32,6 +32,7 @@ public class Lector {
             System.out.println("El monto ingresado no es correcto");
             return -1;
         }catch (IOException e) {}
+        
         if (numFloat<0)
             numFloat=0;
 

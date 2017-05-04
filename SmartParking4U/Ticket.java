@@ -1,27 +1,21 @@
 public class Ticket {
 
-	private Fecha fecha_entrada;
+	private Fecha fechaDeHoy;
 	private Estacionamiento nomEstac;
 	private int folio;
-	private int[] ret_fechaEntrada = new int[3];
 
 	public Ticket () {
-		this.folio=0;
-		fecha_entrada = new Fecha ();
+		setFolio(1000);
+		fechaDeHoy = new Fecha ();
 		nomEstac=new Estacionamiento();
 	}
 
-	public void setFechaEntrada () {
-		fecha_entrada.setFecha();
+	public void setFechaDeHoy () {
+		fechaDeHoy.setFecha();
 	}
 
-	public void getFechaEntrada () {
-		fecha_entrada.getFecha (ret_fechaEntrada);
-	}
-
-	public void imprimeFechaEntrada() {
-		fecha_entrada.getFecha (ret_fechaEntrada);
-		fecha_entrada.imprimeFecha (ret_fechaEntrada);
+	public String getFechaDeHoy () {
+		return fechaDeHoy.getFecha();
 	}
 
 	public void setFolio (int folio_p) {
@@ -32,8 +26,8 @@ public class Ticket {
 		return this.folio;
 	}
 
-	public int sumaFolio () {
-		return this.folio++;	
+	public void sumaFolio () {
+		this.folio++;	
 	}
 	
 	public void imprimeTicket () {

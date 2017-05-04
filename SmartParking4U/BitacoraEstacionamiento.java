@@ -2,56 +2,62 @@ import java.util.ArrayList;
 public class BitacoraEstacionamiento {
 
 	private TicketEstacionamiento eTicket;	
+	private Estacionamiento lugares;
 	private Coche autos;
 	private Lector leeDatos =new Lector();
-	
-	ArrayList <Integer> consecutivo= new  ArrayList <Integer>();
-	ArrayList <String> placas= new  ArrayList <String>();
-	ArrayList <String > hEntrada= new  ArrayList <String>();
-	ArrayList <String> hSalida= new  ArrayList <String>();
-	ArrayList <Float> montoCobro= new  ArrayList <Float>();
+	private Caja operacionesCaja= new Caja();
+	private ArrayList <Integer> consecutivo= new  ArrayList <Integer>();
+	private ArrayList <String> placas= new  ArrayList <String>();
+	private ArrayList <String > hEntrada= new  ArrayList <String>();
+	private ArrayList <String> hSalida= new  ArrayList <String>();
+	private ArrayList <Float> montoCobro= new  ArrayList <Float>();
 	
 	public BitacoraEstacionamiento(){
 		eTicket=new TicketEstacionamiento();
-		autos=new Coche();	
+		autos=new Coche();
+		lugares=new Estacionamiento();	
+	}	
+
+	public void setEntradaAutos(){
+
+		if(lugares.hayCupo()){
+		
+			System.out.print("Teclea la placa >> ");		
+			autos.setPlaca(leeDatos.leeCadena().toUpperCase());
+			placas.add(autos.getPlaca());
+			eTicket.setHoraEntrada();
+			hEntrada.add(eTicket.getHoraEntrada());
+			eTicket.sumaFolio();
+			consecutivo.add(eTicket.getFolio());				
+			hSalida.add(" ");
+			montoCobro.add(0f);	
+			eTicket.imprimeTicketEntrada(eTicket.getFolio(), eTicket.getHoraEntrada(), autos.getPlaca());	
+			lugares.restaCajon();
+		}
 	}
 
-	public boolean getRevisaPlacas(ArrayList placas_establec, ArrayList placas_pension){
-		String temp1=" ";
-		System.out.print("Para iniciar el proceso de salida teclea las placas del auto: ");
-		temp1=leeDatos.leeCadena();
-		return true;
-	}
-
-	public void setEntradaAutos(String placas_param){
-		eTicket.setHoraEntrada();
-		hEntrada.add(eTicket.getHoraEntrada());
-
-		eTicket.sumaFolio();
-		consecutivo.add(eTicket.getFolio());
-
-		autos.setPlaca(placas_param);
-		placas.add(autos.getPlaca());
-				
-		hSalida.add(" ");
-		montoCobro.add(0f);	
-		eTicket.imprimeTicketEntrada(eTicket.getFolio(), eTicket.getHoraEntrada(), autos.getPlaca());	
-	
-	}
-
-	public void setSalidaAutos (String placas_param) {
-		String temp1=placas_param;
+	public void setSalidaAutos () {
+		int temp1=0;
 		int i=0;	
-		for(String temp2:placas){
-			if (temp2.compareTo(temp1)==0) {
-				i=placas.indexOf(temp1);
-				montoCobro.add(i,eTicket.calculaTarifa());
-				eTicket.setHoraSalida();		
-				hSalida.add(i,eTicket.getHoraSalida());
-				eTicket.imprimeTicketSalida(consecutivo.get(i), hEntrada.get(i), hSalida.get(i), placas.get(i), montoCobro.get(i));		
-				break;
-			}
-		}		
+		
+		System.out.println("Para iniciar el proceso de salida teclea el folio del ticket de entrada.");
+		System.out.print(">> ");
+		temp1=leeDatos.leeInt();
+		if (temp1>0){
+			for(Integer temp2:consecutivo){
+				if (temp2.compareTo(temp1)==0) {
+					i=consecutivo.indexOf(temp1);
+					montoCobro.add(i,eTicket.montoACobrar	());
+					eTicket.setHoraSalida();		
+					hSalida.add(i,eTicket.getHoraSalida());
+					eTicket.imprimeTicketSalida(consecutivo.get(i), hEntrada.get(i), hSalida.get(i), placas.get(i), montoCobro.get(i));		
+					lugares.sumaCajon();
+					operacionesCaja.setIngresos(montoCobro.get(i));
+					break;
+				} else
+					System.out.println("Folio no encontrado.");
+			}		
+		} 
 	}
 
 	public ArrayList getPlacas(){

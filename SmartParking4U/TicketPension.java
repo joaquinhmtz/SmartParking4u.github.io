@@ -1,51 +1,77 @@
 public class TicketPension extends Ticket {
 
-	
 	private Fecha fecha_salida;
-	private int[] ret_fechaSalida = new int[3];
-	
 	
 	public TicketPension() {
 		super();
-		fecha_salida = new Fecha ();
+		fecha_salida=new Fecha ();		
 	}
 
-	public void setFechaSalidaSemana () {
-		fecha_salida.setFechaSemana ( fecha_salida );
+	public void setFechaSalida () {
+		fecha_salida.setFecha();
 	}
 
-	public void getFechaSalidaSemana () {
-		fecha_salida.getFecha (ret_fechaSalida);
+	public String getFechaSalida() {
+		return fecha_salida.getFecha();
 	}
 
-	public void setFechaSalidaMes () {
-		fecha_salida.setFechaMes (fecha_salida);
+	public String getFechaSalidaMes () {
+		return fecha_salida.obtenerSalidaFinal(30);
 	}
 
-	public void getFechaSalidaMes () {
-		fecha_salida.getFecha (ret_fechaSalida);
+	public String getFechaSalidaSemana () {
+		return fecha_salida.obtenerSalidaFinal(7);
 	}
 
-	public void imprimeFechaSalidaSemana () {
-		fecha_salida.getFecha (ret_fechaSalida);
-		fecha_salida.imprimeFecha (ret_fechaSalida);
-	}
-
-	public void imprimeFechaSalidaMes() {
-		fecha_salida.getFecha (ret_fechaSalida);
-		fecha_salida.imprimeFecha (ret_fechaSalida);
-	}
-
-	public void imprimeTicketPensionSemana() {
+	public void imprimeTicketEntradaPension(int folio, String hora_entrada, String placas) {
+		System.out.println(" ");
+		System.out.println(" ");
 		imprimeTicket();
-		imprimeFechaEntrada();
-		imprimeFechaSalidaSemana();
+		System.out.println(" ");
+		System.out.println("FECHA: "+getFechaDeHoy());
+		System.out.println(" ");
+		System.out.println("FOLIO: "+folio);
+		System.out.println(" ");
+		System.out.println("HORA ENTRADA: " + hora_entrada);
+		System.out.println(" ");
+		System.out.println("PLACAS: "+placas);
+		System.out.println(" ");
+		System.out.print("Su contrato vence el : "+ tarifa.getTarifaHora());
+		System.out.println(" ");
+		System.out.println(" ");
+		System.out.println("La empresa no se hace responsable por danos parciales o totales de su vehiculo.");
+		System.out.println(" ");
+		System.out.println("Usted deja su vehiculo bajo su propia responsabilidad.");
+		System.out.println(" ");
+		System.out.println(" ");
+		System.out.println("QUEJAS Y OBSERVACIONES 5563540597");
+		System.out.println(" ");
+		System.out.println(" ");
 	}
 
-	public void imprimeTicketPensionMes() {
-
+	public void imprimeTicketSalida(int folio, String hora_entrada, String hora_salida, String placas, float montoACobrar) {
+		System.out.println(" ");
+		System.out.println(" ");
 		imprimeTicket();
-		imprimeFechaEntrada();
-		imprimeFechaSalidaMes();
+		System.out.println(" ");
+		System.out.println("FECHA: "+getFechaDeHoy());
+		System.out.println(" ");
+		System.out.println("FOLIO: "+folio);
+		System.out.println(" ");
+		System.out.println("HORA ENTRADA: " + hora_entrada);
+		System.out.println(" ");
+		System.out.println("HORA SALIDA: " + hora_salida);
+		System.out.println(" ");
+		System.out.println("PLACAS: "+placas);
+		System.out.println(" ");
+		System.out.print("TOTAL: $"+ montoACobrar);
+		System.out.println(" ");
+		System.out.println(" ");
+		System.out.println("Gracias por su preferencia.");
+		System.out.println(" ");
+		System.out.println(" ");
+		System.out.println("QUEJAS Y OBSERVACIONES 5563540597");
+		System.out.println(" ");
+		System.out.println(" ");
 	}
 }
