@@ -1,6 +1,11 @@
 public class TicketPension extends Ticket {
 
 	private Fecha fecha_salida;
+<<<<<<< HEAD
+=======
+	private int[] ret_fechaSalida = new int[3];
+	private Tarifa tarifa = new Tarifa();
+>>>>>>> e87983488bf0ab0dab5bb06d543d25f8076a4e42
 	
 	public TicketPension() {
 		super();
@@ -74,4 +79,15 @@ public class TicketPension extends Ticket {
 		System.out.println(" ");
 		System.out.println(" ");
 	}
+
+	public void imprimeTicketEntrada(int folio, String placas) {
+		System.out.println("FOLIO: "+folio);
+		System.out.println("PLACAS: "+placas);
+	}
+
+	public void imprimeTicketSalida(int folio, String placas) {
+		System.out.println("FOLIO: "+folio);
+		System.out.println("PLACAS: "+placas);
+	}
+
 }
