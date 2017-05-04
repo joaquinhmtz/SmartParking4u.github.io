@@ -3,6 +3,6 @@ public class PruebaTest {
 
 		BitacoraPension prueba = new BitacoraPension();
 
-		prueba.setEntradaPension("399RZR");
+		prueba.setEntradaPension();
 	}
 }
