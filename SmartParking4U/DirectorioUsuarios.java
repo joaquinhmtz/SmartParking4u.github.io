@@ -1,18 +1,18 @@
 public class DirectorioUsuarios {
 
-	private Usuario operador=new Usuario("Operador1", "1234");
-	private Usuario gerente=new Usuario( "administrador", "presto");
+	private Usuario operador;
 	private Lector tomaDato=new Lector();
 
 	public DirectorioUsuarios () {
-
+		operador =new Usuario("Operador1", "presto");
 	}
 
-	public int iniciarSesion () {
+	public boolean iniciarSesion () {
 
+
+		boolean valor = false;
 		String nombre=" ";
 		String contrasena=" ";
-		int valor=-1;
 
 		System.out.println(" ");
 		System.out.print("Dame el usuario: ");
@@ -20,23 +20,14 @@ public class DirectorioUsuarios {
 
 		System.out.print("Dame la contrasena: ");
 		contrasena=tomaDato.leeCadena();
+		if ((operador.getUsuario().compareTo(nombre)==0) && (operador.getContrasena().compareTo(contrasena)==0)) {
+			valor= true;
+		} else{	
+			valor= false ;			
+			System.out.println ("El usuario o la contraseña no coinciden. \n");
 			
-		if (operador.getUsuario().compareTo(nombre)==0){
-			if(operador.getContrasena().compareTo(contrasena)==0){
-				valor=1;
-			} else
-				valor=-1;
-		}
-
-		if (gerente.getUsuario().compareTo(nombre)==0){
-			if(gerente.getContrasena().compareTo(contrasena)==0){
-				valor=2;
-			} else
-				valor=-1;
-		}
-
+		} 
 		return valor;
-
 	}	
 	
 }
